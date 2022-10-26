@@ -34,6 +34,18 @@ const PageSchema = Schema({
           type: String,
           default: 'none',
         },
+        height: {
+          type: String,
+          default: 'auto',
+        },
+        padding: {
+          type: String,
+          default: 0,
+        },
+        margin: {
+          type: String,
+          default: 0,
+        },
       },
       elements: [{
         _id: {
@@ -47,6 +59,16 @@ const PageSchema = Schema({
         },
         index: {
           type: Number,
+        },
+        tag: {
+          type: String,
+          enum: ['p', 'h1, h2', 'h3', 'h4', 'h5', 'h6', 'span', 'label', 'img'],
+        },
+        text: {
+          type: String,
+        },
+        src: {
+          type: String,
         },
       }],
     }],
